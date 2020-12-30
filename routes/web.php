@@ -18,5 +18,9 @@ Route::get('/old', function () {
     return view('welcome');
 });
 
-Route::get('posts/{post?}/comments/{comment?}', 'CommentController@showcomments');
-Route::get('posts/{post?}', 'CommentController@showpost');
+// routes/web.php
+Route::get('posts', function () {
+    $posts = DB::table('posts')->get();
+
+    return view('posts.index', ['posts' => $posts]);
+});
