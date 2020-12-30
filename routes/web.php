@@ -17,6 +17,3 @@ Route::get('/', function () {
 Route::get('/old', function () {
     return view('welcome');
 });
-Route::get('/old2', function () {
-    return view('welcome');
-});
