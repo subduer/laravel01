@@ -18,5 +18,5 @@ Route::get('/old', function () {
     return view('welcome');
 });
 
-Route::get('posts/{post}/comments/{comment}', 'CommentController@showcomments');
-Route::get('posts/{post}', 'CommentController@showpost');
+Route::get('posts/{post?}/comments/{comment?}', 'CommentController@showcomments');
+Route::get('posts/{post?}', 'CommentController@showpost');
